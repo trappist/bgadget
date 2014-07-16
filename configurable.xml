@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Avvo Badge" height="250" scaling="false" />
-  <UserPref name="badge_id" display_name="Badge ID" required="true" />
+  <UserPref name="profile_id" display_name="Profile ID" required="true" />
   <UserPref name="specialty_id" display_name="Specialty ID" required="true" />
   <UserPref name="type" display_name="Type" default_value="Reviews" datatype="enum" >
     <EnumValue value="Reviews" />
@@ -14,7 +14,7 @@
       function loadGadget() {
         var prefs = new gadgets.Prefs();
         var el = document.getElementById('badge_div');
-        el.setAttribute('data-target', '//www.avvo.com/professional_badges/' + prefs.getString('badge_id'));
+        el.setAttribute('data-target', '//www.avvo.com/professional_badges/' + prefs.getString('profile_id'));
         el.setAttribute('data-specialty', prefs.getString('specialty_id'));
         el.setAttribute('data-type', prefs.getString('type').toLowerCase());
       }
