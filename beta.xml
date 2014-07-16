@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Avvo Badge" height="250" scaling="false" />
-  <UserPref name="badge_id" display_name="Badge ID" required="true" />
+  <UserPref name="badge_id" display_name="Profile ID" required="true" />
   <UserPref name="specialty_id" display_name="Specialty ID" required="true" />
   <UserPref name="type" display_name="Type" default_value="Reviews" datatype="enum" >
     <EnumValue value="Reviews" />
