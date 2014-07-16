@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Avvo Badge" height="250" scaling="false" />
-  <UserPref name="badge_id" display_name="Profile ID" required="true" />
+  <UserPref name="profile_id" display_name="Profile ID" required="true" />
   <UserPref name="specialty_id" display_name="Specialty ID" required="true" />
   <UserPref name="type" display_name="Type" default_value="Reviews" datatype="enum" >
     <EnumValue value="Reviews" />
@@ -12,17 +12,13 @@
   <![CDATA[
     <script type="text/javascript">
       var el = document.getElementById('badge_div');
-      el.setAttribute('data-target', '//www.avvo.com/professional_badges/' + prefs.getString('badge_id'));
+      el.setAttribute('data-target', '//www.avvo.com/professional_badges/' + prefs.getString('profile_id'));
       el.setAttribute('data-specialty', prefs.getString('specialty_id'));
       el.setAttribute('data-type', prefs.getString('type').toLowerCase());
     </script>
     <script type="text/javascript" src="//www.avvo.com/assets/badges-v2.js"></script>
     <div id="badge_div" class="avvo_badge" style="text-align:center;border:5px solid #efe7f6;width:160px;">
-      <div class="avvo_content">
-        <!--<a href="http://www.avvo.com/attorneys/11795-ny-bryan-berson-988631.html?utm_campaign=avvo_review_badge&utm_content=988631&utm_medium=avvo_badge&utm_source=avvo" rel="me" target="_blank" style="font-family:sans-serif;color:#007a94;font-size:12px;text-decoration:none;">Lawyer Bryan Berson</a>
-        |
-        <a href="http://www.avvo.com/litigation-lawyer/ny/west_islip.html?utm_campaign=avvo_review_badge&utm_content=988631&utm_medium=avvo_badge&utm_source=avvo" target="_blank" style="border:0;width:120px;height:82px;">Lawyer Litigation</a> -->
-      </div>
+      <div class="avvo_content" />
     </div>
   ]]>
   </Content>
